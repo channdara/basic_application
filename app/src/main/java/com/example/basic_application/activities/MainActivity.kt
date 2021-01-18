@@ -24,8 +24,8 @@ class MainActivity : AppCompatActivity(), MainView {
     }
 
     override fun onDestroy() {
-        super.onDestroy()
         presenter.dispose()
+        super.onDestroy()
     }
 
     override fun onLoading() {
@@ -42,10 +42,10 @@ class MainActivity : AppCompatActivity(), MainView {
     }
 
     override fun onGetPostsSuccess(list: ArrayList<Post>) {
-        main_recycler_view.visibility = View.VISIBLE
         main_progress_bar.visibility = View.GONE
         main_tv_error.visibility = View.GONE
         main_recycler_view.apply {
+            visibility = View.VISIBLE
             layoutManager = LinearLayoutManager(this@MainActivity)
             adapter = MainAdapter(list, object : MainRecyclerViewListener {
                 override fun onItemPressed(post: Post) {

@@ -21,7 +21,7 @@ class MainAdapter(
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) =
         holder.bind(list[holder.adapterPosition])
 
-    override fun getItemCount(): Int = if (list.isNullOrEmpty()) 0 else list.size
+    override fun getItemCount(): Int = list.size
 
     inner class MainViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         fun bind(post: Post) {
