@@ -26,7 +26,7 @@ class MainAdapter(
     inner class MainViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         fun bind(post: Post) {
             view.apply {
-                item_tv_number.text = "User: ${post.userId} Post: ${post.id}"
+                item_tv_number.text = post.displayID
                 item_tv_title.text = post.title
                 item_tv_body.text = post.body
             }

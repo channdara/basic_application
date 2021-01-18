@@ -6,31 +6,5 @@ class Post(
     var title: String,
     var body: String
 ) {
-    companion object {
-        val dummy = arrayListOf<Post>(
-            Post(1, 1, "1", "1"),
-            Post(1, 1, "1", "1"),
-            Post(1, 1, "1", "1"),
-            Post(1, 1, "1", "1"),
-            Post(1, 1, "1", "1"),
-            Post(1, 1, "1", "1"),
-            Post(1, 1, "1", "1"),
-            Post(1, 1, "1", "1"),
-            Post(1, 1, "1", "1"),
-            Post(1, 1, "1", "1"),
-            Post(1, 1, "1", "1"),
-            Post(1, 1, "1", "1"),
-            Post(1, 1, "1", "1"),
-            Post(1, 1, "1", "1"),
-            Post(1, 1, "1", "1"),
-            Post(1, 1, "1", "1"),
-            Post(1, 1, "1", "1"),
-            Post(1, 1, "1", "1"),
-            Post(1, 1, "1", "1"),
-            Post(1, 1, "1", "1"),
-            Post(1, 1, "1", "1"),
-            Post(1, 1, "1", "1"),
-            Post(1, 1, "1", "1"),
-        )
-    }
+    val displayID: String get() = "User: $userId Post: $id"
 }
